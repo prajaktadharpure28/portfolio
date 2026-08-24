@@ -1556,3 +1556,352 @@ section {
         text-align: center;
     }
 }
+
+
+/* ==================================================
+   ADVANCED THEME SYSTEM + UI
+================================================== */
+
+:root {
+    --page-bg: #ffffff;
+    --surface: #ffffff;
+    --surface-2: #f8f7fc;
+    --surface-3: #f1eff8;
+    --text-strong: #111827;
+    --text-body: #4b5563;
+    --text-muted: #6b7280;
+    --border-color: #e5e7eb;
+    --header-bg: rgba(255, 255, 255, 0.82);
+    --card-shadow: 0 18px 45px rgba(17, 24, 39, 0.08);
+    --gradient: linear-gradient(135deg, #7c3aed, #a855f7);
+    --glass: rgba(255, 255, 255, 0.72);
+    --transition: 0.35s cubic-bezier(.2,.8,.2,1);
+}
+
+html.dark-theme {
+    --page-bg: #09090f;
+    --surface: #11111a;
+    --surface-2: #151522;
+    --surface-3: #1b1b2a;
+    --text-strong: #f8fafc;
+    --text-body: #cbd5e1;
+    --text-muted: #dbe3ef;
+    --border-color: #28283a;
+    --header-bg: rgba(9, 9, 15, 0.82);
+    --card-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+    --glass: rgba(17, 17, 26, 0.72);
+}
+
+html.dark-theme body,
+html.dark-theme .about-section,
+html.dark-theme .experience-section {
+    background: var(--page-bg);
+    color: var(--text-body);
+}
+
+html.dark-theme .header {
+    background: var(--header-bg);
+    border-color: var(--border-color);
+}
+
+html.dark-theme .logo,
+html.dark-theme .navbar a,
+html.dark-theme .home-content h1,
+html.dark-theme .home-content h2,
+html.dark-theme .section-heading h2,
+html.dark-theme .about-card h3,
+html.dark-theme .about-content h3,
+html.dark-theme .about-info strong,
+html.dark-theme .skill-card h3,
+html.dark-theme .experience-card h3,
+html.dark-theme .experience-card h4,
+html.dark-theme .contact-content h2,
+html.dark-theme .contact-item strong {
+    color: var(--text-strong);
+}
+
+html.dark-theme .navbar a {
+    color: #cbd5e1;
+}
+
+html.dark-theme .home-section {
+    background:
+        radial-gradient(circle at 85% 20%, rgba(168, 85, 247, 0.16), transparent 30%),
+        radial-gradient(circle at 10% 80%, rgba(124, 58, 237, 0.10), transparent 25%),
+        linear-gradient(135deg, #09090f 0%, #11111a 100%);
+}
+
+html.dark-theme .secondary-btn,
+html.dark-theme .skill-card,
+html.dark-theme .experience-card,
+html.dark-theme .contact-container,
+html.dark-theme .contact-item,
+html.dark-theme .floating-card,
+html.dark-theme .about-card,
+html.dark-theme .about-info div {
+    background: var(--surface);
+    border-color: var(--border-color);
+}
+
+html.dark-theme .secondary-btn {
+    color: var(--text-strong);
+}
+
+html.dark-theme .skills-section,
+html.dark-theme .contact-section {
+    background: var(--surface-2);
+}
+
+html.dark-theme .technology-list span,
+html.dark-theme .tags span,
+html.dark-theme .project-tech span {
+    background: rgba(124, 58, 237, 0.16);
+    color: var(--primary-dark);
+}
+
+html.dark-theme .projects-section,
+html.dark-theme .footer {
+    background: #06060b;
+}
+
+html.dark-theme .social-links a,
+html.dark-theme .floating-card strong,
+html.dark-theme .floating-card small,
+html.dark-theme .home-description,
+html.dark-theme .about-stat strong,
+html.dark-theme .about-content > p,
+html.dark-theme .about-stat span,
+html.dark-theme .skill-card p,
+html.dark-theme .experience-card p,
+html.dark-theme .contact-description,
+html.dark-theme .contact-item small {
+    color: var(--text-muted);
+}
+
+html.dark-theme .profile-circle {
+    background: var(--surface);
+    border-color: var(--surface);
+    box-shadow: 0 0 0 1px rgba(167, 139, 250, 0.18), 0 25px 60px rgba(0,0,0,.45);
+}
+
+html.dark-theme .contact-icon {
+    background: rgba(124, 58, 237, 0.16);
+}
+
+html {
+    transition: background-color .3s ease, color .3s ease;
+}
+
+body {
+    background: var(--page-bg);
+    color: var(--text-body);
+    transition: background-color .3s ease, color .3s ease;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-toggle,
+.mobile-menu-btn {
+    border: 1px solid var(--border-color);
+    background: var(--surface);
+    color: var(--text-strong);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.theme-toggle:hover {
+    color: white;
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: rotate(12deg) scale(1.04);
+}
+
+.mobile-menu-btn {
+    display: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    z-index: 2000;
+    background: var(--gradient);
+    box-shadow: 0 0 14px rgba(124,58,237,.55);
+}
+
+.back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    background: var(--gradient);
+    box-shadow: 0 12px 30px rgba(124,58,237,.3);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: var(--transition);
+    z-index: 900;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.reveal-section {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Better cards */
+.skill-card,
+.project-card,
+.experience-card,
+.about-card,
+.contact-container {
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.skill-card:hover,
+.experience-card:hover,
+.about-card:hover {
+    box-shadow: var(--card-shadow);
+}
+
+.project-card {
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.project-card:hover {
+    box-shadow: 0 22px 50px rgba(0,0,0,.16);
+}
+
+/* Subtle animated gradient heading */
+.home-content h1 span,
+.section-heading h2 span,
+.contact-content h2 span {
+    background: linear-gradient(90deg, #7c3aed, #c084fc, #7c3aed);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientText 5s linear infinite;
+}
+
+@keyframes gradientText {
+    to { background-position: 200% center; }
+}
+
+@keyframes floatCard {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.react-card { animation: floatCard 4s ease-in-out infinite; }
+.node-card { animation: floatCard 4.8s ease-in-out infinite .4s; }
+.mongo-card { animation: floatCard 4.4s ease-in-out infinite .8s; }
+
+@media (max-width: 950px) {
+    .mobile-menu-btn {
+        display: grid;
+        place-items: center;
+        order: 3;
+    }
+
+    .navbar {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 5%;
+        right: 5%;
+        padding: 18px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        background: var(--surface);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        box-shadow: var(--card-shadow);
+    }
+
+    .navbar.open {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 12px 10px;
+        border-radius: 8px;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+        background: rgba(124,58,237,.10);
+    }
+
+    .navbar a.active::after {
+        display: none;
+    }
+
+    .nav-button {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .nav-actions {
+        margin-left: auto;
+        margin-right: 8px;
+    }
+
+    .home-visual {
+        transform: scale(.82);
+    }
+
+    .back-to-top {
+        right: 16px;
+        bottom: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+    }
+}

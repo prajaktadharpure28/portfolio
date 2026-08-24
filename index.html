@@ -8,7 +8,8 @@
     <title>Prajakta Dharpure | MERN Stack Developer</title>
 
     <meta name="description"
-        content="Portfolio of Prajakta Dharpure, MERN Stack Developer and Frontend Developer.">
+        content="Prajakta Dharpure — MERN Stack Developer and Frontend Developer portfolio featuring projects, experience, skills and contact details.">
+    <meta name="theme-color" content="#7c3aed">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,6 +27,7 @@
 </head>
 
 <body>
+    <div class="scroll-progress" id="scrollProgress"></div>
 
     <!-- ==================================================
          NAVBAR
@@ -40,7 +42,11 @@
                 Prajakta
             </a>
 
-            <nav class="navbar">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="navbar" id="navbar">
 
                 <a href="#home" class="active">
                     Home
@@ -79,9 +85,15 @@
 
             </nav>
 
-            <a href="#contact" class="nav-button">
-                Let's Talk
-            </a>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode" title="Toggle theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <a href="#contact" class="nav-button">
+                    Let's Talk
+                </a>
+            </div>
 
         </div>
 
@@ -94,7 +106,7 @@
              HOME
         ================================================== -->
 
-        <section id="home" class="home-section">
+        <section id="home" class="reveal-section home-section">
 
             <div class="container home-container">
 
@@ -243,7 +255,7 @@
              ABOUT
         ================================================== -->
 
-        <section id="about" class="about-section">
+        <section id="about" class="reveal-section about-section">
 
             <div class="container">
 
@@ -376,7 +388,7 @@
              SKILLS
         ================================================== -->
 
-        <section id="skills" class="skills-section">
+        <section id="skills" class="reveal-section skills-section">
 
             <div class="container">
 
@@ -543,7 +555,7 @@
              EXPERIENCE
         ================================================== -->
 
-        <section id="experience" class="experience-section">
+        <section id="experience" class="reveal-section experience-section">
 
             <div class="container">
 
@@ -698,7 +710,7 @@
              PROJECTS
         ================================================== -->
 
-        <section id="projects" class="projects-section">
+        <section id="projects" class="reveal-section projects-section">
 
             <div class="container">
 
@@ -910,7 +922,7 @@
              CONTACT
         ================================================== -->
 
-        <section id="contact" class="contact-section">
+        <section id="contact" class="reveal-section contact-section">
 
             <div class="container">
 
@@ -1082,6 +1094,10 @@
 
     </footer>
 
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
